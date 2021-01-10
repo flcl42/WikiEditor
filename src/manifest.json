@@ -1,9 +1,9 @@
 {
   "manifest_version": 2,
 
-  "name": "VSTS Wiki Editor",
-  "description": "This extension will provide WYSIWYG editor for VSTS Wiki",
-  "version": "1.0.1",
+  "name": "Azure Devops Wiki WYSIWYG",
+  "description": "This extension will provide WYSIWYG editor for Azure Devops Wikis",
+  "version": "1.0.0",
     "background": {
         "scripts": ["background.js"],
         "persistent": false
@@ -15,7 +15,7 @@
     "content_scripts": 
     [
         {
-            "matches":["*://*.visualstudio.com/*","*://dev.azure.com/*","*://tfs/*"],
+            "matches":["https://dev.azure.com/*"],
             "js":["jquery-3.2.1.slim.min.js", "markdown-it.js", "to-mark.js", "tui-code-snippet.js", "codemirror.js", "highlight.pack.js", "squire-raw.js", "tui-editor-Editor.js", "main.js"],
             "css":["codemirror.css", "github.css", "tui-editor.css", "tui-editor-contents.css"],
             "run_at": "document_end"
